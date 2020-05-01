@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		E102CDA8245C3A2900691A1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102CDA7245C3A2900691A1E /* ViewController.swift */; };
 		E102CDAA245C3A2B00691A1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E102CDA9245C3A2B00691A1E /* Assets.xcassets */; };
 		E102CDAD245C3A2B00691A1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E102CDAB245C3A2B00691A1E /* Main.storyboard */; };
+		E102CDB7245C3A3900691A1E /* DTPageControl in Frameworks */ = {isa = PBXBuildFile; productRef = E102CDB6245C3A3900691A1E /* DTPageControl */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E102CDB7245C3A3900691A1E /* DTPageControl in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +81,9 @@
 			dependencies = (
 			);
 			name = PageControlExample;
+			packageProductDependencies = (
+				E102CDB6245C3A3900691A1E /* DTPageControl */,
+			);
 			productName = PageControlExample;
 			productReference = E102CDA2245C3A2900691A1E /* PageControlExample.app */;
 			productType = "com.apple.product-type.application";
@@ -107,6 +112,9 @@
 				Base,
 			);
 			mainGroup = E102CD99245C3A2900691A1E;
+			packageReferences = (
+				E102CDB5245C3A3900691A1E /* XCRemoteSwiftPackageReference "DTPageControl" */,
+			);
 			productRefGroup = E102CDA3245C3A2900691A1E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -327,6 +335,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E102CDB5245C3A3900691A1E /* XCRemoteSwiftPackageReference "DTPageControl" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/demianturner/DTPageControl";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E102CDB6245C3A3900691A1E /* DTPageControl */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E102CDB5245C3A3900691A1E /* XCRemoteSwiftPackageReference "DTPageControl" */;
+			productName = DTPageControl;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E102CD9A245C3A2900691A1E /* Project object */;
 }

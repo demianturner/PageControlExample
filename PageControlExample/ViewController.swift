@@ -7,21 +7,37 @@
 //
 
 import Cocoa
+import DTPageControl
 
 class ViewController: NSViewController {
+    
+    private var pageControl: DTPageControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupPageControl()
+    }
+    
+    // MARK: - private
+
+    private func setupPageControl() {
+        pageControl = DTPageControl()
+        pageControl.numberOfPages = 4
+        let width: CGFloat = 200
+        let x: CGFloat = (view.frame.width - width) / 2
+        pageControl.frame = CGRect(x: x, y: 20, width: 200, height: 20)
+        view.addSubview(pageControl)
     }
 
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
+    // MARK: - IBAction
+
+    @IBAction func tapPreviousButton(_ sender: NSButton) {
+        pageControl.currentPage -= 1
     }
 
-
+    @IBAction func tapNextButton(_ sender: NSButton) {
+        pageControl.currentPage += 1
+    }
 }
 
